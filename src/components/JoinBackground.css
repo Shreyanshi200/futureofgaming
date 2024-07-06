@@ -1,0 +1,14 @@
+.join-background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0.5px;
+  bottom: 0;
+  left: 0;
+  border: 1px solid var(--white);
+  box-sizing: border-box;
+  opacity: 0.2;
+  z-index: 1;
+}
