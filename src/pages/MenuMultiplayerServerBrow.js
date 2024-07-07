@@ -10,15 +10,15 @@ const MenuMultiplayerServerBrow = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const settingsResponse = await fetch("http://localhost:5000/api/settings");
+      const settingsResponse = await fetch("https://battlefield-zsqw.onrender.com/api/settings");
       const settingsData = await settingsResponse.json();
       setSettings(settingsData);
 
-      const advancedResponse = await fetch("http://localhost:5000/api/advanced");
+      const advancedResponse = await fetch("https://battlefield-zsqw.onrender.com/api/advanced");
       const advancedData = await advancedResponse.json();
       setAdvanced(advancedData);
 
-      const rulesResponse = await fetch("http://localhost:5000/api/rules");
+      const rulesResponse = await fetch("https://battlefield-zsqw.onrender.com/api/rules");
       const rulesData = await rulesResponse.json();
       setRules(rulesData);
     };
