@@ -1,12 +1,16 @@
-
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 5000;
+const path = require("path");
 
 // CORS middleware to allow requests from your React app
 const cors = require('cors');
 app.use(cors());
 
+app.use(express.static("build"));
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 // Sample data
 const settingsData = {
   region: "europe - de",
